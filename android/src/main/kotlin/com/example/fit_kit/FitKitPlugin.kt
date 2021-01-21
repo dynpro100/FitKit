@@ -136,7 +136,7 @@ class FitKitPlugin(private val registrar: Registrar) : MethodCallHandler {
 
     private fun read(request: ReadRequest<*>, result: Result) {
         val options = FitnessOptions.builder()
-                .addDataType(request.type.dataType)
+                .addDataType(request.type.dataType, FitnessOptions.ACCESS_READ)
                 .build()
 
         requestOAuthPermissions(options, {

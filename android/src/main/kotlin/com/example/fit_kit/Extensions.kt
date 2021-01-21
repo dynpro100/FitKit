@@ -20,7 +20,7 @@ fun String.fromDartType(): Type? {
 }
 
 fun FitnessOptions.Builder.addDataTypes(dataTypes: List<DataType>) = apply {
-    dataTypes.forEach { dataType -> addDataType(dataType) }
+    dataTypes.forEach { dataType -> addDataType(dataType, FitnessOptions.ACCESS_READ) }
 }
 
 // because this value is private field in Session
